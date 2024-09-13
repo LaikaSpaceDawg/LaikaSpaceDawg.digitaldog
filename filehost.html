@@ -11,9 +11,16 @@ permalink: /filehost/
         :root {
             --gradient-color-one: yellow;
             --gradient-color-two: black;
-            --text-color: white;
-            --text-color-header: white;
-            --text-color-note: white;
+            --text-color: white;          /* Tag used in variably setting color */
+            --text-color-header: white;   /* Tag used in variably setting color */
+            --text-color-note: white;     /* Tag used in variably setting color */
+            --spacer-height: 10px;          /* Tag used in variably setting spacer height */
+            --spacer-width: 10px;           /* Tag used in variably setting spacer width */
+            --divider-width: 100%;          /* Tag used in variably setting divider width */
+            --text-size: 1em;               /* Tag used in variably setting font size */
+            --text-size-note: 0.8em;        /* Tag used in variably setting font size */
+            --text-size-note-small: 0.4em;  /* Tag used in variably setting font size */
+            --button-size: 32px;            /* Tag used in variably setting button image size */
         }
 
         .file-info {
@@ -31,9 +38,13 @@ permalink: /filehost/
             margin: 5px; /* Small margins around the icon */
         }
 
-        /*.text-block, .download-link, .date-added, .file-size {
-            Additional styling if needed 
-        } */
+        .text-block, .download-link, .date-added, .file-size {
+            color: var(--text-color);
+            font-size: var(--font-size);
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 0;
+        } 
         
         body {
             margin: 0;
