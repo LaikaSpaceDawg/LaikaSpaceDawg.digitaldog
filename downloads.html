@@ -18,6 +18,7 @@ permalink: /downloads/
             --spacer-height: 10px;          /* Tag used in variably setting spacer height */
             --spacer-width: 10px;           /* Tag used in variably setting spacer width */
             --header-height: 20px;          /* Tag used in variably setting header height */
+            --header-font-size: 24px;       /* Tag used in variably setting header font */
             --divider-width: 100%;          /* Tag used in variably setting divider width */
             --text-size: 1em;               /* Tag used in variably setting font size */
             --text-size-note: 0.8em;        /* Tag used in variably setting font size */
@@ -66,13 +67,13 @@ permalink: /downloads/
         }
         .hazard {
             width: 100%;
-            height: 50px;
+            height: 25px;
             background-image: repeating-linear-gradient(
                 45deg,
                 var(--gradient-color-one),
-                var(--gradient-color-one) 10px,
-                var(--gradient-color-two) 10px,
-                var(--gradient-color-two) 20px
+                var(--gradient-color-one) 5px,
+                var(--gradient-color-two) 5px,
+                var(--gradient-color-two) 10px
             );
         }
         .horizontal-divider {                   /* Horizontal Line Divider */
@@ -132,8 +133,8 @@ permalink: /downloads/
 </head>
 <body>
     <div class="hazard"></div>
-    <h1>Downloads Page</h1>
-    <h1>Work In Progress</h1>
+    <h1 style="--header-height: 10px; --header-font-size: 12px">Downloads Page</h1>
+    <h1 style="--header-height: 10px; --header-font-size: 12px">Work In Progress</h1>
     <div class="hazard"></div>
     <ul>
         <li><a href="/">Home</a></li>
