@@ -74,6 +74,12 @@ permalink: /downloads/
                 var(--gradient-color-two) 20px
             );
         }
+        .horizontal-spacer {
+            display: block;
+            height: var(--spacer-height); /* TODO definetly needs to be done better */
+            width: var(--spacer-width);
+        }
+
         h1 {
             margin: 20px 0;
             font-size: 24px;
@@ -98,6 +104,13 @@ permalink: /downloads/
             border-radius: 5px;
         }
 
+        p {                                    /* Paragraph text style */
+            color: var(--text-color);
+            font-size: var(--font-size);
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
         sn {                                   /* Small Note text style */
             color: var(--text-color-note);
             font-size: var(--text-size-note-small);
@@ -115,6 +128,10 @@ permalink: /downloads/
     <ul>
         <li><a href="/">Home</a></li>
     </ul>
+    <h1>Updates:</h1>
+    <div class="horizontal-spacer" style="--spacer-height: 5px;"></div>
+    <p style="--font-size: 0.6em;">9/13/2024: Added test downloads.</p>
+    <div class="horizontal-spacer" style="--spacer-height: 5px;"></div>
     <div class="file-info-container">
         <div class="file-info">
             <!-- <span class="icon">📄</span> --> 
