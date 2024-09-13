@@ -15,6 +15,25 @@ permalink: /filehost/
             --text-color-header: white;
             --text-color-note: white;
         }
+
+        .file-info {
+            display: flex; /* Aligns children in a row */
+            align-items: center; /* Centers children vertically */
+            gap: 10px; /* Space between items */
+            font-size: 0.8em; /* Smaller text */
+        }
+
+        .icon {
+            width: 20px; /* Adjust the width as needed */
+            height: 20px; /* Adjust the height as needed */
+            object-fit: contain; /* Ensures the image is scaled properly within the dimensions */
+            background-color: transparent; /* Ensures no background color */
+            margin: 5px; /* Small margins around the icon */
+        }
+
+        /*.text-block, .download-link, .date-added, .file-size {
+            Additional styling if needed 
+        } */
         
         body {
             margin: 0;
@@ -71,5 +90,13 @@ permalink: /filehost/
     <ul>
         <li><a href="/">Home</a></li>
     </ul>
+    <div class="file-info">
+        <!-- <span class="icon">📄</span> --> 
+        <span class="text-block">Sample File</span>
+        <img src="/assets/icons/rar_icon.png" class="icon"> <!-- PNG icon -->
+        <a href="/downloads/test.jpg" download="test.jpg" class="download-link">Download</a>
+        <span class="date-added">09/12/2024</span>
+        <span class="file-size">22.4 KB</span>
+    </div>
 </body>
 </html>
