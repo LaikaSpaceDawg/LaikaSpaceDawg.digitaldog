@@ -53,8 +53,7 @@ permalink: /downloads/
             margin-top: 0;
             margin-bottom: 0;
         } 
-        
-        body {
+        header {
             margin: 0;
             padding: 0;
             background-color: #1f1f1f;
@@ -63,6 +62,17 @@ permalink: /downloads/
             flex-direction: column;
             align-items: center;
             justify-content: flex-start; /* Aligns content at the top */
+            height: 20vh;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1f1f1f;
+            font-family: Consolas, 'Courier New', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Aligns content at the top */
             height: 100vh;
         }
         .hazard {
@@ -131,7 +141,7 @@ permalink: /downloads/
         }
     </style>
 </head>
-<body>
+<header>
     <div class="hazard"></div>
     <h1 style="--header-height: 5px; --header-font-size: 12px">Downloads Page</h1>
     <h1 style="--header-height: 5px; --header-font-size: 12px">Work In Progress</h1>
@@ -139,6 +149,8 @@ permalink: /downloads/
     <ul>
         <li><a href="/">Home</a></li>
     </ul>
+</header>
+<body>
     <h1 style="--header-height: 5px">Updates:</h1>
     <p style="--font-size: 0.8em;">9/13/2024: Added test downloads.</p>
     <div class="horizontal-spacer" style="--spacer-height: 5px;"></div>
