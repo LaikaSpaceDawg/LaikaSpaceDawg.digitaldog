@@ -23,11 +23,16 @@ permalink: /filehost/
             --button-size: 32px;            /* Tag used in variably setting button image size */
         }
 
+        .file-info-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto; /* Adjust based on content needs */
+            gap: 10px; /* Spacing between columns */
+            align-items: center;
+            margin-bottom: 10px; /* Spacing between rows */
+        }
+
         .file-info {
-            display: flex; /* Aligns children in a row */
-            align-items: center; /* Centers children vertically */
-            gap: 10px; /* Space between items */
-            font-size: 0.8em; /* Smaller text */
+            display: contents; /* Makes the container disappear, leaving children as grid items */
         }
 
         .icon {
@@ -101,21 +106,23 @@ permalink: /filehost/
     <ul>
         <li><a href="/">Home</a></li>
     </ul>
-    <div class="file-info">
-        <!-- <span class="icon">📄</span> --> 
-        <span class="text-block">Sample File</span>
-        <img src="/assets/icons/photo_icon.png" class="icon"> <!-- PNG icon -->
-        <a href="/downloads/test.jpg" download="test.jpg" class="download-link">Download</a>
-        <span class="date-added">09/12/2024</span>
-        <span class="file-size">22.4 KB</span>
-    </div>
-    <div class="file-info">
-        <!-- <span class="icon">📄</span> --> 
-        <span class="text-block">Bitcoin Miner</span>
-        <img src="/assets/icons/rar_icon.png" class="icon"> <!-- PNG icon -->
-        <a href="/downloads/bitcoin_miner.jpg" download="bitcoin_miner.jpg" class="download-link">Download</a>
-        <span class="date-added">09/12/2024</span>
-        <span class="file-size">41.1 KB</span>
+    <div class="file-info-container">
+        <div class="file-info">
+            <!-- <span class="icon">📄</span> --> 
+            <span class="text-block">Sample File</span>
+            <img src="/assets/icons/photo_icon.png" class="icon"> <!-- PNG icon -->
+            <a href="/downloads/test.jpg" download="test.jpg" class="download-link">Download</a>
+            <span class="date-added">09/12/2024</span>
+            <span class="file-size">22.4 KB</span>
+        </div>
+        <div class="file-info">
+            <!-- <span class="icon">📄</span> --> 
+            <span class="text-block">Bitcoin Miner</span>
+            <img src="/assets/icons/rar_icon.png" class="icon"> <!-- PNG icon -->
+            <a href="/downloads/bitcoin_miner.jpg" download="bitcoin_miner.jpg" class="download-link">Download</a>
+            <span class="date-added">09/12/2024</span>
+            <span class="file-size">41.1 KB</span>
+        </div>
     </div>
 </body>
 </html>
