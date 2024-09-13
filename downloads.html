@@ -17,6 +17,7 @@ permalink: /downloads/
             --text-color-note: white;     /* Tag used in variably setting color */
             --spacer-height: 10px;          /* Tag used in variably setting spacer height */
             --spacer-width: 10px;           /* Tag used in variably setting spacer width */
+            --header-height: 20px;          /* Tag used in variably setting header height */
             --divider-width: 100%;          /* Tag used in variably setting divider width */
             --text-size: 1em;               /* Tag used in variably setting font size */
             --text-size-note: 0.8em;        /* Tag used in variably setting font size */
@@ -81,7 +82,7 @@ permalink: /downloads/
         }
 
         h1 {
-            margin: 20px 0;
+            margin: var(--header-height) 0;
             font-size: 24px;
             color: var(--text-color-header);
         }
@@ -128,9 +129,9 @@ permalink: /downloads/
     <ul>
         <li><a href="/">Home</a></li>
     </ul>
-    <h1>Updates:</h1>
+    <h1 style="--header-height: 5px">Updates:</h1>
     <p style="--font-size: 0.8em;">9/13/2024: Added test downloads.</p>
-    <div class="horizontal-spacer" style="--spacer-height: 2.5px;"></div>
+    <div class="horizontal-spacer" style="--spacer-height: 2px;"></div>
     <div class="file-info-container">
         <div class="file-info">
             <!-- <span class="icon">📄</span> --> 
