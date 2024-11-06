@@ -8,33 +8,35 @@ permalink: /downloads/
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Downloads</title>
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/laika_construction.png">
     <style>
         :root {
             --gradient-color-one: yellow;
             --gradient-color-two: black;
-            --font-size: 0.8em;
-            --text-color: white;          /* Tag used in variably setting color */
-            --text-color-header: white;   /* Tag used in variably setting color */
-            --text-color-note: white;     /* Tag used in variably setting color */
-            --spacer-height: 10px;          /* Tag used in variably setting spacer height */
-            --spacer-width: 10px;           /* Tag used in variably setting spacer width */
-            --header-height: 20px;          /* Tag used in variably setting header height */
-            --header-font-size: 24px;       /* Tag used in variably setting header font */
-            --divider-width: 100%;          /* Tag used in variably setting divider width */
-            --text-size: 1em;               /* Tag used in variably setting font size */
-            --text-size-note: 0.8em;        /* Tag used in variably setting font size */
-            --text-size-note-small: 0.4em;  /* Tag used in variably setting font size */
-            --button-size: 32px;            /* Tag used in variably setting button image size */
+            --font-size: 0.6vw; 
+            --text-color: white; 
+            --text-color-header: white;
+            --text-color-note: white; 
+            --spacer-height: 2vh; 
+            --spacer-width: 2vw; 
+            --header-height: 2vh; 
+            --header-font-size: 2vw; 
+            --divider-width: 100%;
+            --text-size: 1vw; 
+            --text-size-note: 0.8vw; 
+            --text-size-note-small: 0.4vw; 
+            --button-size: 5vh;
+            --button-font-size: 0.6em; 
         }
 
         .file-info-container {
             display: grid;
             grid-template-columns: auto auto auto auto auto; /* Adjust based on content needs */
-            column-gap: 10px; /* Spacing between columns */
+            column-gap: 1vw; /* Spacing between columns */
             align-items: center;
-            margin-bottom: 5px; /* Spacing between rows */
+            margin-bottom: 0.4vh; /* Spacing between rows */
         }
 
         .file-info {
@@ -42,11 +44,11 @@ permalink: /downloads/
         }
 
         .icon {
-            width: 32px; /* Adjust the width as needed */
-            height: 32px; /* Adjust the height as needed */
+            width: 2vw; /* Adjust the width as needed */
+            height: 2vh; /* Adjust the height as needed */
             object-fit: contain; /* Ensures the image is scaled properly within the dimensions */
             background-color: transparent; /* Ensures no background color */
-            margin: 0px; /* Small margins around the icon */
+            margin: 0; /* Small margins around the icon */
         }
 
         .text-block, .download-link, .date-added, .file-size {
@@ -71,13 +73,13 @@ permalink: /downloads/
         }
         .hazard {
             width: 100%;
-            height: 10px;
+            height: 4vw;
             background-image: repeating-linear-gradient(
                 45deg,
                 var(--gradient-color-one),
-                var(--gradient-color-one) 4px,
-                var(--gradient-color-two) 4px,
-                var(--gradient-color-two) 8px
+                var(--gradient-color-one) 0.8vh,
+                var(--gradient-color-two) 0.8vh,
+                var(--gradient-color-two) 1.6vh
             );
         }
 
@@ -92,17 +94,18 @@ permalink: /downloads/
             width: 100%; /* Full width */
             display: flex; /* Use flex to center the link */
             justify-content: center; /* Center horizontally */
-            margin-bottom: 20px; /* Margin at the bottom */
+            margin-bottom: 2vh; /* Margin at the bottom */
         }
         li {
-            margin: 20px 0;
+            margin: 2vw 0;
         }
         a {
             color: var(--text-color-note);
+            font-size: var(--button-font-size);
             text-decoration: none;
-            border: 2px solid white;
-            padding: 5px;
-            border-radius: 5px;
+            border: 0.3vh solid white;
+            padding: 0.3vh;
+            border-radius: 0.3vh;
         }
         .no-button {
             border: none;
@@ -126,7 +129,7 @@ permalink: /downloads/
         }
 
         .horizontal-divider {                   /* Horizontal Line Divider */
-            height: 2px; 
+            height: 2vh; 
             background-color: white;
             width: var(--divider-width);             /* Variable divider width */
             margin-top: var(--spacer-height);        /* Variable spacer margin height */
@@ -143,19 +146,19 @@ permalink: /downloads/
 </head>
 <body>
     <div class="hazard"></div>
-    <h1 style="--header-height: 5px; --header-font-size: 12px">Downloads Page</h1>
-    <h1 style="--header-height: 0; --header-font-size: 12px">Work In Progress</h1>
-    <div class="horizontal-spacer" style="--spacer-height: 5px;"></div>
+    <h1 style="--header-height: 1vh; --header-font-size: 2vh">Downloads Page</h1>
+    <h1 style="--header-height: 1vh; --header-font-size: 2vh">Work In Progress</h1>
+    <div class="horizontal-spacer" style="--spacer-height: 1vh;"></div>
     <div class="hazard"></div>
-    <div class="horizontal-spacer" style="--spacer-height: 10px;"></div>
-    <h1 style="--header-height: 5px">Updates:</h1>
-    <div class="horizontal-spacer" style="--spacer-height: 10px;"></div>
+    <div class="horizontal-spacer" style="--spacer-height: 1vh;"></div>
+    <h1 style="--header-height: 1vh; --header-font-size: 1vh">Updates:</h1>
+    <div class="horizontal-spacer" style="--spacer-height: 1vh;"></div>
     <p style="--font-size: 0.8em;">9/12/2024: Added test downloads.</p>
-    <div class="horizontal-spacer" style="--spacer-height: 5px;"></div>
+    <div class="horizontal-spacer" style="--spacer-height: 1vh;"></div>
     <p style="--font-size: 0.8em;">9/15/2024: Added handmade arduino.h replacement.</p>
-    <div class="horizontal-spacer" style="--spacer-height: 5px;"></div>
+    <div class="horizontal-spacer" style="--spacer-height: 1vh;"></div>
     <p style="--font-size: 0.8em;">9/15/2024: Added two python malware analysis scripts.</p>
-    <div class="horizontal-spacer" style="--spacer-height: 20px;"></div>
+    <div class="horizontal-spacer" style="--spacer-height: 4vh;"></div>
     <div class="file-info-container">
         <div class="file-info">
             <!-- <span class="icon">📄</span> --> 
@@ -172,6 +175,7 @@ permalink: /downloads/
             <a href="/downloads/bitcoin_miner.jpg" download="bitcoin_miner.jpg" class="download-link">Download</a>
             <span class="date-added">09/12/2024</span>
             <span class="file-size">41.1 KB</span>
+            <sn style="--text-color-note: #6E6E6E; --text-size-note-small: 0.6em">Not a real bitcoin miner.</sn>
         </div>
         <div class="file-info">
             <!-- <span class="icon">📄</span> --> 
@@ -182,7 +186,7 @@ permalink: /downloads/
             <span class="file-size">5.67 KB</span>
         </div>
     </div>
-    <div class="horizontal-divider" style="--spacer-height: 5px; --divider-width: 30%"></div>
+    <div class="horizontal-divider" style="--spacer-height: 0.5vh; --divider-width: 30%"></div>
     <div class="file-info-container">
         <div class="file-info">
             <!-- <span class="icon">📄</span> --> 
@@ -202,17 +206,15 @@ permalink: /downloads/
         </div>
     </div>
     <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="/" style="font-size: 1em;">Home</a></li>
     </ul>
-    
-    <div class="horizontal-spacer" style="--spacer-height: 250px"></div>
 
-    <sn style="--text-color-note: #6E6E6E; --text-size-note-small: 0.6em">Not a real bitcoin miner.</sn>
-    <div class="horizontal-divider" style="--spacer-height: 20px;"></div>
+    <div class="horizontal-spacer" style="--spacer-height: 275vh"></div>
     <sn style="--text-color-note: #6E6E6E; --text-size-note-small: 0.6em">Small page of personal downloads.</sn>
-    <div class="horizontal-spacer" style="--spacer-height: 10px"></div>
+    <div class="horizontal-spacer" style="--spacer-height: 5vh"></div>
     <sn href="mailto:laika@digitaldog.online" style="--text-color-note: #6E6E6E; --text-size-note-small: 0.6em">
-        Contact: <a href="mailto:laika@digitaldog.online" class="no-button" style="color: inherit; text-decoration: none;">laika@digitaldog.online</a>
+        Contact: <a href="mailto:laika@digitaldog.online" class="no-button" style="color: inherit; text-decoration: none; font-size: 1em;">laika@digitaldog.online</a>
     </sn>
+    <div class="horizontal-divider" style="--spacer-height: 5vh;"></div>
 </body>
 </html>
