@@ -42,6 +42,20 @@ permalink: /downloads/
         .file-info {
             display: contents; /* Makes the container disappear, leaving children as grid items */
         }
+        .text-info-container {
+            display: flex;
+            flex-direction: column; /* The direction of the flexible items */
+            justify-content: center; /* aligns items horizontally (if the flex direction is row) or vertically (if the flex direction is column) */
+            align-items: center; /* How the items align perpendicular to the main axis (determined by flex-direction) */
+            /* (Rest of your css properties) */
+        }
+        .text-info {
+            display: flex;
+            flex-direction: column; /* The direction of the flexible items */
+            justify-content: center; /* aligns items horizontally (if the flex direction is row) or vertically (if the flex direction is column) */
+            align-items: center; /* How the items align perpendicular to the main axis (determined by flex-direction) */
+            /* (Rest of your css properties) */
+        }
 
         .icon {
             width: 2vw; /* Adjust the width as needed */
@@ -154,16 +168,16 @@ permalink: /downloads/
     <h1 style="--header-height: 1vh; --header-font-size: 1.7vh">Updates:</h1>
     <div class="horizontal-spacer" style="--spacer-height: 0.5vh;"></div>
 
-    <div class="file-info-container">
-        <div class="file-info">
+    <div class="text-info-container">
+        <div class="text-info">
             <p style="--font-size: 0.8em;">9/12/2024: Added test downloads.</p>
             <div class="horizontal-spacer" style="--spacer-height: 1vh;"></div>
         </div>
-        <div class="file-info">
+        <div class="text-info">
             <p style="--font-size: 0.8em;">9/15/2024: Added handmade arduino.h replacement.</p>
             <div class="horizontal-spacer" style="--spacer-height: 1vh;"></div>
         </div>
-        <div class="file-info">
+        <div class="text-info">
             <p style="--font-size: 0.8em;">9/15/2024: Added two python malware analysis scripts.</p>
             <div class="horizontal-spacer" style="--spacer-height: 4vh;"></div>
         </div>
