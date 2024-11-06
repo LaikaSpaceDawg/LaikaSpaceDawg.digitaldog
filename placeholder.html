@@ -11,19 +11,28 @@ permalink: /placeholder/
         :root {
             --gradient-color-one: yellow;
             --gradient-color-two: black;
-            --text-color: white;
+            --font-size: 0.6vw; 
+            --text-color: white; 
             --text-color-header: white;
-            --text-color-note: white;
-            --font-size: 0.8em;
-            --spacer-height: 10px;          /* Tag used in variably setting spacer height */
-            --spacer-width: 10px;           /* Tag used in variably setting spacer width */
-            --header-height: 20px;          /* Tag used in variably setting header height */
-            --header-font-size: 24px;       /* Tag used in variably setting header font */
-            --divider-width: 100%;          /* Tag used in variably setting divider width */
-            --text-size: 1em;               /* Tag used in variably setting font size */
-            --text-size-note: 0.8em;        /* Tag used in variably setting font size */
-            --text-size-note-small: 0.4em;  /* Tag used in variably setting font size */
-            --button-size: 32px;            /* Tag used in variably setting button image size */
+            --text-color-note: white; 
+            --spacer-height: 2vh; 
+            --spacer-width: 2vw; 
+            --header-height: 2vh; 
+            --header-font-size: 2vw; 
+            --divider-width: 100%;
+            --text-size: 1vw; 
+            --text-size-note: 0.8vw; 
+            --text-size-note-small: 0.4vw; 
+            --button-size: 5vh;
+            --button-font-size: 0.8em; 
+        }
+        #banner {
+            width: 100%;  /* Banner will take up full width */
+            height: 140vh;  /* Banner height will be 25% of the viewport height */
+            background-image: url(/assets/arar_hideout.jpg);  /* Replace with your banner image url */
+            background-repeat: no-repeat;  /* This will prevent the image from repeating */
+            background-size: cover;  /* This will scale the image to be as large as possible */
+            background-position: center;  /* This will center the banner image */
         }
         
         body {
@@ -39,18 +48,19 @@ permalink: /placeholder/
         }
         .hazard {
             width: 100%;
-            height: 50px;
+            height: 4vw;
             background-image: repeating-linear-gradient(
                 45deg,
                 var(--gradient-color-one),
-                var(--gradient-color-one) 10px,
-                var(--gradient-color-two) 10px,
-                var(--gradient-color-two) 20px
+                var(--gradient-color-one) 0.8vh,
+                var(--gradient-color-two) 0.8vh,
+                var(--gradient-color-two) 1.6vh
             );
         }
+
         h1 {
-            margin: 20px 0;
-            font-size: 24px;
+            margin: var(--header-height) 0;
+            font-size: var(--header-font-size);
             color: var(--text-color-header);
         }
         ul {
@@ -59,21 +69,29 @@ permalink: /placeholder/
             width: 100%; /* Full width */
             display: flex; /* Use flex to center the link */
             justify-content: center; /* Center horizontally */
-            margin-bottom: 20px; /* Margin at the bottom */
+            margin-bottom: 2vh; /* Margin at the bottom */
         }
         li {
-            margin: 20px 0;
+            margin: 2vw 0;
         }
         a {
             color: var(--text-color-note);
+            font-size: var(--button-font-size);
             text-decoration: none;
-            border: 2px solid white;
-            padding: 5px;
-            border-radius: 5px;
+            border: 0.3vh solid white;
+            padding: 0.3vh;
+            border-radius: 0.3vh;
         }
+        .no-button {
+            border: none;
+            padding: 0;
+            border-radius: 0;
+        }
+        
     </style>
 </head>
 <body>
+    <div id="banner"></div>
     <div class="hazard"></div>
     <h1>Work In Progress</h1>
     <div class="hazard"></div>
