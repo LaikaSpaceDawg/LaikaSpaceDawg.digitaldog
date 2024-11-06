@@ -27,6 +27,14 @@ permalink: /downloads/
             --button-size: 5vh;
             --button-font-size: 0.8em; 
         }
+        #banner {
+            width: 100%;  /* Banner will take up full width */
+            height: 20vh;  /* Banner height will be 25% of the viewport height */
+            background-image: url(assets/arar_hideout.jpg);  /* Replace with your banner image url */
+            background-repeat: no-repeat;  /* This will prevent the image from repeating */
+            background-size: cover;  /* This will scale the image to be as large as possible */
+            background-position: center;  /* This will center the banner image */
+        }
 
         .file-info-container {
             display: grid;
@@ -156,6 +164,7 @@ permalink: /downloads/
     </style>
 </head>
 <body>
+    <div id="banner"></div>
     <div class="hazard"></div>
     <h1 style="--header-height: 0.5vh; --header-font-size: 2vh">Downloads Page</h1>
     <h1 style="--header-height: 0.5vh; --header-font-size: 2vh">Work In Progress</h1>
