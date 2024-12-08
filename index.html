@@ -9,21 +9,74 @@
     <meta http-equiv="refresh" content="0;url=https://sillydoggirl.online">
     <style>
         :root {
-            --font-size: 0.8em;
-            --text-color: white;          /* Tag used in variably setting color */
-            --text-color-header: white;   /* Tag used in variably setting color */
-            --text-color-note: white;     /* Tag used in variably setting color */
-            --spacer-height: 10px;          /* Tag used in variably setting spacer height */
-            --spacer-width: 10px;           /* Tag used in variably setting spacer width */
-            --header-height: 20px;          /* Tag used in variably setting header height */
-            --header-font-size: 24px;       /* Tag used in variably setting header font */
-            --divider-width: 100%;          /* Tag used in variably setting divider width */
-            --text-size: 1em;               /* Tag used in variably setting font size */
-            --text-size-note: 0.8em;        /* Tag used in variably setting font size */
-            --text-size-note-small: 0.4em;  /* Tag used in variably setting font size */
-            --button-size: 32px;            /* Tag used in variably setting button image size */
+            --gradient-color-one: yellow;
+            --gradient-color-two: black;
+            --font-size: 0.6vw; 
+            --text-color: white; 
+            --text-color-header: white;
+            --text-color-note: white; 
+            --spacer-height: 2vh; 
+            --spacer-width: 2vw; 
+            --header-height: 2vh; 
+            --header-font-size: 2vw; 
+            --divider-width: 100%;
+            --text-size: 1vw; 
+            --text-size-note: 0.8vw; 
+            --text-size-note-small: 0.4vw; 
+            --button-size: 5vh;
+            --button-font-size: 0.8em; 
+        }
+        #banner {
+            width: 100%;  /* Banner will take up full width */
+            height: 140vh;  /* Banner height will be 25% of the viewport height */
+            background-image: url(/assets/arar_hideout.jpg);  /* Replace with your banner image url */
+            background-repeat: no-repeat;  /* This will prevent the image from repeating */
+            background-size: cover;  /* This will scale the image to be as large as possible */
+            background-position: center;  /* This will center the banner image */
         }
 
+        .file-info-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto; /* Adjust based on content needs */
+            column-gap: 1vw; /* Spacing between columns */
+            align-items: center;
+            margin-bottom: 0.4vh; /* Spacing between rows */
+        }
+
+        .file-info {
+            display: contents; /* Makes the container disappear, leaving children as grid items */
+        }
+        .text-info-container {
+            display: flex;
+            flex-direction: column; /* The direction of the flexible items */
+            justify-content: center; /* aligns items horizontally (if the flex direction is row) or vertically (if the flex direction is column) */
+            align-items: center; /* How the items align perpendicular to the main axis (determined by flex-direction) */
+            /* (Rest of your css properties) */
+        }
+        .text-info {
+            display: flex;
+            flex-direction: column; /* The direction of the flexible items */
+            justify-content: center; /* aligns items horizontally (if the flex direction is row) or vertically (if the flex direction is column) */
+            align-items: center; /* How the items align perpendicular to the main axis (determined by flex-direction) */
+            /* (Rest of your css properties) */
+        }
+
+        .icon {
+            width: 2vw; /* Adjust the width as needed */
+            height: 2vh; /* Adjust the height as needed */
+            object-fit: contain; /* Ensures the image is scaled properly within the dimensions */
+            background-color: transparent; /* Ensures no background color */
+            margin: 0; /* Small margins around the icon */
+        }
+
+        .text-block, .download-link, .date-added, .file-size {
+            color: var(--text-color);
+            font-size: var(--font-size);
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 0;
+        } 
+        
         body {
             margin: 0;
             padding: 0;
@@ -36,22 +89,46 @@
             justify-content: flex-start; /* Aligns content at the top */
             height: 100vh;
         }
-        .content {
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-            width: 60%; 
-        }
         .hazard {
             width: 100%;
-            height: 10px;
+            height: 4vw;
             background-image: repeating-linear-gradient(
                 45deg,
                 var(--gradient-color-one),
-                var(--gradient-color-one) 4px,
-                var(--gradient-color-two) 4px,
-                var(--gradient-color-two) 8px
+                var(--gradient-color-one) 0.8vh,
+                var(--gradient-color-two) 0.8vh,
+                var(--gradient-color-two) 1.6vh
             );
+        }
+
+        h1 {
+            margin: var(--header-height) 0;
+            font-size: var(--header-font-size);
+            color: var(--text-color-header);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%; /* Full width */
+            display: flex; /* Use flex to center the link */
+            justify-content: center; /* Center horizontally */
+            margin-bottom: 1vh; /* Margin at the bottom */
+        }
+        li {
+            margin: 1vh 0;
+        }
+        a {
+            color: var(--text-color-note);
+            font-size: var(--button-font-size);
+            text-decoration: none;
+            border: 0.3vh solid white;
+            padding: 0.3vh;
+            border-radius: 0.3vh;
+        }
+        .no-button {
+            border: none;
+            padding: 0;
+            border-radius: 0;
         }
 
         p {                                    /* Paragraph text style */
@@ -70,7 +147,7 @@
         }
 
         .horizontal-divider {                   /* Horizontal Line Divider */
-            height: 2px; 
+            height: 1.5vh; 
             background-color: white;
             width: var(--divider-width);             /* Variable divider width */
             margin-top: var(--spacer-height);        /* Variable spacer margin height */
@@ -86,11 +163,27 @@
     </style>
 </head>
 <body>
+    <div id="banner"></div>
     <div class="hazard"></div>
-    <h1 style="--header-height: 5px; --header-font-size: 12px">Main Page</h1>
-    <h1 style="--header-height: 0; --header-font-size: 12px">Work In Progress</h1>
-    <div class="horizontal-spacer" style="--spacer-height: 5px;"></div>
+    <h1 style="--header-height: 0.5vh; --header-font-size: 2vh">Downloads Page</h1>
+    <h1 style="--header-height: 0.5vh; --header-font-size: 2vh">Work In Progress</h1>
+    <div class="horizontal-spacer" style="--spacer-height: 0.5vh;"></div>
     <div class="hazard"></div>
-    <div class="horizontal-spacer" style="--spacer-height: 10px;"></div>
+
+    <h1>Heaven is Online! (◕‿◕✿)</h1>
+    <h1>Homepage</h1>
+
+    <ul>
+        <li><a href="/" style="font-size: 0.8em;">Home</a></li>
+    </ul>
+
+    <div class="horizontal-spacer" style="--spacer-height: 60vh"></div>
+    <sn style="--text-color-note: #6E6E6E; --text-size-note-small: 0.6em">Placeholder</sn>
+    <div class="horizontal-spacer" style="--spacer-height: 5vh"></div>
+    <sn href="mailto:laika@digitaldog.online" style="--text-color-note: #6E6E6E; --text-size-note-small: 0.6em">
+        Contact: <a href="mailto:laika@digitaldog.online" class="no-button" style="color: inherit; text-decoration: none; font-size: 1em;">laika@digitaldog.online</a>
+    </sn>
+    <div class="horizontal-spacer" style="--spacer-height: 5vh"></div>
+    <div class="horizontal-divider" style="--spacer-height: 0vh;"></div>
 </body>
 </html>
